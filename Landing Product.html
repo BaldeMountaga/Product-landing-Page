@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+  <head><title>Landing Product</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/98ba065edd.js" crossorigin="anonymous"></script>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+        .container {
+          font-size: 1.2em;
+          min-height: 300px;
+          width: 100%;
+          background: LightGray;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto 2fr;
+          grid-gap: 1px;
+          grid-template-areas:
+          "header"
+          "content1"
+          "content2"
+          "content3"
+          "footer";
+        }
+        .item1 {
+          grid-area: header;
+          color: #FFE4B5;
+          background: rgb(15, 1, 56);
+          font-size: 25px; /*use em  after all*/
+        }     
+        .item2 {
+          background: white;
+          grid-area: content1;
+          /*display: flex;
+          flex-wrap: wrap;
+          color: black;*/
+          align-self: auto;
+        }   
+        .item3{
+          background: white; 
+          grid-area: content2; 
+          padding: 60px 10px 10px 60px;
+
+        }
+        .item4{
+          background: whitesmoke;
+          grid-area: content3;
+          padding: 60px 30px 60px 60px;
+          /*border-color: white;*/
+        }   
+        .item5 {
+          background: whitesmoke;
+          grid-area: footer;
+          font-size: 0.7em;
+          padding: 12px 10px 12px 10px;
+          /*border-color: white;*/
+        }
+                
+        /* @media (min-width: 100px){
+          .container{
+          grid-template-columns: auto 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas:
+          "content"
+          "content"
+          "content";
+          }
+        }
+        @media (min-width: 400px){
+          .container{
+          grid-template-areas:
+          "content header"
+          "advert content"
+          "footer footer"; 
+          }
+        }*/
+        ul.topnav{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        ul.topnav a {
+          display: block;
+          color: white;
+          text-decoration: none; 
+          padding: 30px;
+        }
+        ul.botnav{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.botnav li a {
+          display:block;
+          text-decoration: none;
+          float: right;
+          padding: 5px;
+        }
+        img{
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+        p{
+          text-align: right;
+        }
+        .title{
+          padding-left: 30px;
+          font-weight: bolder;
+          float: left;   
+        }
+        /*ul.title{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          align-items: left;
+          justify-content: left;
+        }
+       ul.title li a {
+          display: block;
+          color: white;
+          text-decoration: none; 
+          /*float: left;
+          padding: 30px;
+       }*/
+        .home{
+          float: right;
+          font-size: medium;
+        }
+        ul.privacy{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.privacy li a {
+          display:block;
+          text-decoration: none;
+          float:left;
+          padding: 5px;
+          color: black;
+          padding-left: 0.9em;
+          padding-right: 0.9em;
+          border-right: 1px solid black;
+        }
+        .first{
+          width: 350px;
+          float:left; /* add this */
+          padding: 20px;
+        }
+        ul.first{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.first li a {
+          display:block;
+          text-decoration: none;
+          padding: 5px;
+          color: black;
+        }
+        .second{
+          width: 350px;
+          float: left; /* add this */
+          padding-right: 100px;
+        }
+        ul.second{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.second li a {
+          display:block;
+          text-decoration: none;
+          padding: 5px;
+          color: black;
+        }
+        .third{
+          width: 350px;
+          float: left; /* add this */
+        }
+        ul.third{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.third li a {
+          display:block;
+          text-decoration: none;
+          padding: 5px;
+          color: black;
+        }
+        .four{
+          width: 350px;
+          float: left;
+        }
+        ul.four{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+        ul.four li a {
+          display:block;
+          text-decoration: none;
+          padding: 5px;
+          color: black;
+        }
+        #social-media{
+          font-weight:bolder;
+          font-size: medium;
+          color:rgb(36, 36, 151);
+          float:right
+        }
+        #sub_img{
+          float:left;
+          padding-left: 0.9em;
+          padding-right: 0.9em;
+        }
+        .sub_im{
+          color: darkgray;
+        }
+        .login{
+          float: right;
+          padding-right: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1">
+        <div>
+          <ul class="title topnav">
+            <a href="#">JONA-HETA</a>
+          </ul>
+          <ul class="topnav"> 
+            <a class="home"  href="#">Support</a>
+            <a class="home"  href="#">Where to buy</a>
+            <a class="home"  href="#">Phones</a>
+          </ul>
+          <ul class="topnav login">
+            <a  href="#">Login</a>
+            <input type="text" placeholder="Search..">
+          </ul>
+        </div>
+      </div>
+      <div class="item2">
+        <div>
+          <img src="new-iphone-8-concept1.jpg" alt="phone homepage">
+        </div>
+      </div>
+      <div class="item3">
+        <div id="sub_img">
+          <img src="HiOS copy1.jpg" alt="HiOS">
+          <!--<div class="sub_im"><strong>HiOS</strong><br>Slik interface fro better interacitive experience</div>-->
+        </div>
+        <div> 
+          <img src="compare model 1.jpg" alt="phone"> 
+          <!--<div class="sub_im"><strong>Phone Models</strong><br>Select phone models for more detailed comparison</div>-->
+        </div>
+        <div> 
+          <img src="anti-casse1.jpg" alt="phone"> 
+          <!--<div class="sub_im"><strong>Phone Models</strong><br>Phone glasses</div> -->
+        </div>
+      </div>
+      <div class="item4">
+        <div>
+          <ul class="first">
+            <li>About JH-MOBILE</li><br/>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+      </div>
+      <div>
+        <ul class="second">
+          <li>Products</li><br>
+          <li><a href="#">Techno</a></li>
+          <li><a href="#">iPhone</a></li>
+          <li><a href="#">Laptop</a></li>
+          <li><a href="#">Electronic</a></li>
+        </ul>
+      </div>  
+      <div>
+        <ul class="third">
+          <li>Support</li><br>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Repair Centers</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="four">
+          <li id="social-media">JONA-HETA</li><br>
+          <li><a  href="#"></a></li>
+          <li><a  href="#"></a></li>
+        </ul>
+      </div>
+      </div>
+      <div class="item5">
+       <div >
+          <ul class="privacy">
+            <li><a href="#">Privacy Policy</a></li> 
+            <li><a a href="#">Terms of Use</a></li>
+            <li><a a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div >
+          <p style="text-align: right;"><em>&COPY 2019, JONA-HETA-MOBILE</em>    
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!--item4 my footer not working properly fix it-->
+<!-- add one search button using google -->
+<!--
+  Add at least two or three template rows that allows you to add to other rows in your page
+
+-->
